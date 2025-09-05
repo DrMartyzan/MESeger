@@ -1,0 +1,7 @@
+.close-icon {position: relative; width: 120px; height: 120px; cursor: pointer;}
+.close-icon:before, .close-icon:after {content: ''; position: absolute; top: 50%;
+  left: 50%; width: 80px; height: 12px; background-color: gray; border-radius: 0;}
+.close-icon:before {transform: translate(-50%, -50%) rotate(45deg);}
+.close-icon:after {transform: translate(-50%, -50%) rotate(-45deg);}
+.close-icon {margin-right: 10px;}
+.button-wrapper {margin-bottom: 100px;}

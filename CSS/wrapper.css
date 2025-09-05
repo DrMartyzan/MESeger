@@ -1,0 +1,53 @@
+.input-wrapper{position: relative; width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu;}
+.name-input{transition: border-color 0.3s;
+  width: 100%; padding: 14px 16px; font-size: 17px; color: #1c1c1e; outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu;
+  background: rgba(242, 242, 247, 0.7);  border-radius: 32px; box-sizing: border-box;
+  border: 1px solid transparent; transition: 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 2px rgb(60 60 67 / 0.1), 0 1px 3px rgb(0 0 0 / 0.1);}
+.name-input:focus{border-color: #007aff;  outline: none;
+  background: rgba(255, 255, 255, 0.9); box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);}
+.input-wrapper label{transform-origin: left top;
+  position: absolute; left: 15px; top: 12px; font-size: 16px; height: 20px;
+  line-height: 20px; color: dimgray; padding: 0 6px; border-radius: 3px;
+  pointer-events: none; transition: all 0.3s ease; box-sizing: border-box;}
+.name-input:focus + label, .name-input:not(:placeholder-shown) + label {
+  top: 2px; font-size: 12px; padding: 0 4px; color: #007aff; transform: scale(0.85);}
+.password-wrapper {position: relative; width: 300px;  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu}
+.password-input {transition: 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;  padding: 14px 44px 14px 16px;  font-size: 17px; outline: none;
+  font-family: inherit; color: #1c1c1e; background: rgba(242, 242, 247, 0.7);
+  border: 1px solid transparent; box-sizing: border-box; border-radius: 32px; 
+  box-shadow: 0 1px 2px rgb(60 60 67 / 0.1),0 1px 3px rgb(0 0 0 / 0.1); }
+.password-input:focus {box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+  outline: none; background: rgba(255, 255, 255, 0.9);  border-color: #007aff;}
+.password-wrapper label {box-sizing: border-box;
+  position: absolute; left: 15px; top: 12px;  font-size: 16px;  height: 20px;
+  line-height: 20px; color: dimgray;  padding: 0 6px;  border-radius: 3px;
+  pointer-events: none;  transition: all 0.3s ease;  transform-origin: left top;}
+.password-input:focus + label, .password-input:not(:placeholder-shown) + label {
+  top: 2px; font-size: 12px; padding: 0 4px; color: #007aff; transform: scale(0.85);}
+.toggle-password { margin-top: 4px;
+  border: none; position: absolute; top: 50%; right: 14px;  width: 24px; height: 24px;
+  cursor: pointer; padding: 0; background: transparent; transform: translateY(-50%);
+  z-index: 9999;  display: flex; align-items: center;  justify-content: center;}
+.button-wrapper{position: relative; width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu;}
+.back-button{transition: border-color 0.3s;
+  width: 100%; padding: 14px 16px; font-size: 17px; color: #1c1c1e; outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu;
+  background: rgba(242, 242, 247, 0.7);  border-radius: 32px; box-sizing: border-box;
+  border: 1px solid transparent; transition: 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 1px 2px rgb(60 60 67 / 0.1), 0 1px 3px rgb(0 0 0 / 0.1);}
+.back-button:focus{border-color: #007aff;  outline: none;
+  background: rgba(255, 255, 255, 0.9); box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);}
+.button-wrapper label{transform-origin: left top;
+  position: absolute; left: 115px; top: 12px; font-size: 16px; height: 20px;
+  line-height: 20px; color: dimgray; padding: 0 6px; border-radius: 3px;
+  pointer-events: none; transition: all 0.3s ease; box-sizing: border-box;}
+.toggle-password svg {width: 20px; height: 20px; fill: none; stroke: #777; transition: stroke 0.3s ease;}
+.toggle-password.active svg {stroke: #007aff;}
+.password-input + label {margin-top: 10px;}
+.password-input {margin-top: 10px;}  

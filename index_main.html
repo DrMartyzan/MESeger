@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Enter</title>
+    <link rel="stylesheet" href="CSS/switcher.css"> <link rel="stylesheet" href="CSS/style.css"> <link rel="stylesheet" href="CSS/wrapper.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>MESeger</h1>
+    <form>
+        <div class = "input-wrapper">
+            <input id = "name" type = "text" class = "name-input" placeholder = " " /> <label for = "name">Введите логин</label>
+        </div>
+        <div class="password-wrapper">
+            <input id="password" type = "password" placeholder = " " autocomplete="off" class = "password-input" />
+            <label for="password" class = "floating-label">Введите пароль</label>
+            <button type="button" class = "toggle-password" aria-label = "Показать пароль">
+                <svg xmlns="http://www.w3.org/2000/svg" width = "24" height="24" fill="none" stroke="#777" stroke-width = "2" stroke-linecap="round" stroke-linejoin = "round" class="eye-icon" viewBox = "0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/> <circle cx="12" cy="12" r="3"/>
+                </svg>
+            </button>
+        </div>
+        <div class="switch-wrapper">
+            <input type = "checkbox" id = "toggle" class = "switch-input" /> <label for = "toggle" class = "switch-label">
+                <span class="switch-thumb"> <span class = "text-login">Войти</span> <span class = "text-register">Регистрация</span>
+                </span>
+            </label>
+        </div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('toggle');
+            const switchThumb = document.querySelector('.switch-thumb');
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    switchThumb.textContent = 'Регистрация';
+                } else {
+                    switchThumb.textContent = 'Войти';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('toggle');
+            const switchThumb = document.querySelector('.switch-thumb');
+
+            switchThumb.addEventListener('click', function(event) {
+                event.stopPropagation();
+                 if (toggle.checked) {
+                    window.location.href = 'index_register.html';
+                 } else {
+                    window.location.href = 'index_login.html';
+                 }
+            });
+            const toggleBtn = document.querySelector('.toggle-password');
+            const passwordInput = document.getElementById('password');
+
+            toggleBtn.addEventListener('click', () => {
+                const isPassword = passwordInput.type === 'password';
+                passwordInput.type = isPassword ? 'text' : 'password';
+                toggleBtn.classList.toggle('active', isPassword);
+            });
+        });
+    </script>
+</body>
+</html>

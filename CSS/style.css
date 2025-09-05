@@ -1,0 +1,7 @@
+body, html {height: 100%; margin: 0;  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; color: dimgray;
+  font-family: Arial, sans-serif; background-color: white;}
+h1 {font-family: "Raleway", Calibri;font-size: 40px;}
+input[type = "number"]::-webkit-inner-spin-button,
+input[type = "number"]::-webkit-outer-spin-button {-webkit-appearance: none; margin: 0;}
+input[type = "number"] {-moz-appearance: textfield;}
